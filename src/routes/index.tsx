@@ -7,26 +7,26 @@ import notesImage from "@/assets/notes.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sable Nuit Eau de Parfum — Sarkar Parfums" },
+      { title: "Sable Nuit (100ml) — Sarkar Parfums" },
       {
         name: "description",
         content:
-          "Sable Nuit, a new eau de parfum by Sarkar Parfums: bergamot and pink pepper over lavender, cedar and ambroxan. 50ml launch edition.",
+          "Sable Nuit by Sarkar: blue bergamot and pink pepper over lavender, cedar and ambroxan. A fresh-ambré parfum for nights out. 100ml, ₹1,499.",
       },
-      { property: "og:title", content: "Sable Nuit Eau de Parfum — Sarkar Parfums" },
+      { property: "og:title", content: "Sable Nuit (100ml) — Sarkar Parfums" },
       {
         property: "og:description",
-        content: "A smoky, radiant bergamot-ambroxan signature. Launch edition of 500 flacons.",
+        content: "It smells like cold citrus, smoke and a long night ahead. Fresh-ambré parfum, 100ml.",
       },
     ],
   }),
-  component: ProductLanding,
+  component: ProductLanding;
 });
 
 const notes = [
-  { stage: "Top", items: "Calabrian Bergamot · Pink Pepper · Grapefruit Zest" },
-  { stage: "Heart", items: "Provence Lavender · Geranium · Elemi Resin" },
-  { stage: "Base", items: "Ambroxan · Virginia Cedar · Vetiver · Grey Amber" },
+  { stage: "Top Notes", items: "Blue Bergamot, Pink Pepper, Grapefruit Zest" },
+  { stage: "Heart Notes", items: "Provence Lavender, Geranium, Elemi Resin" },
+  { stage: "Base Notes", items: "Ambroxan, Virginia Cedar, Vetiver, Grey Amber" },
 ];
 
 const pillars = [
@@ -37,13 +37,16 @@ const pillars = [
 
 function ProductLanding() {
   return (
-    <main className="surface-noir min-h-screen">
-      <header className="border-b border-border">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <span className="font-display text-lg tracking-[0.35em] uppercase">Sarkar</span>
-          <nav className="hidden gap-8 text-xs tracking-[0.2em] uppercase text-muted-foreground md:flex">
-            <a href="#story" className="transition-colors hover:text-foreground">
-              Story
+    <div className="min-h-screen bg-background">
+      <div className="bg-primary py-2 text-center text-[0.68rem] tracking-[0.2em] uppercase text-primary-foreground">
+        Claim two 7ml freebies with every order
+      </div>
+
+      <header className="sticky top-0 z-10 border-b border-border bg-background">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <nav className="hidden gap-7 text-[0.7rem] tracking-[0.18em] uppercase text-muted-foreground md:flex">
+            <a href="#description" className="transition-colors hover:text-foreground">
+              Description
             </a>
             <a href="#notes" className="transition-colors hover:text-foreground">
               Notes
@@ -52,149 +55,163 @@ function ProductLanding() {
               FAQ
             </a>
           </nav>
-          <span className="text-xs tracking-[0.2em] uppercase text-primary">Launching Soon</span>
+          <span className="text-xl font-medium tracking-[0.42em] uppercase">Sarkar</span>
+          <Button className="rounded-none px-6 text-[0.7rem] tracking-[0.18em] uppercase">Buy Now</Button>
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 md:grid-cols-2 md:py-24">
-        <div>
-          <p className="eyebrow">New · Eau de Parfum</p>
-          <h1 className="mt-6 text-5xl leading-[1.05] md:text-7xl">
-            Sable <span className="text-gold">Nuit</span>
-          </h1>
-          <div className="hairline mt-8 w-24" />
-          <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
-            A fresh-ambré signature in the spirit of Dior Sauvage — cut sharper, worn darker. Blue
-            bergamot struck against pink pepper, resting on a smoked ambroxan trail that follows you
-            long after the room empties.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <div>
-              <p className="font-display text-3xl">₹3,450</p>
-              <p className="mt-1 text-xs tracking-[0.2em] uppercase text-muted-foreground">50 ml · Extrait fresh</p>
-            </div>
-            <div className="flex gap-3">
-              <Button size="lg" className="rounded-none px-8 tracking-[0.2em] uppercase">
-                Reserve Yours
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-none border-border bg-transparent px-8 tracking-[0.2em] uppercase"
-              >
-                Sample 5ml
-              </Button>
-            </div>
-          </div>
-          <p className="mt-6 text-xs tracking-[0.15em] uppercase text-muted-foreground">
-            Free shipping in India · Ships from Ahmedabad
-          </p>
-        </div>
-
-        <div className="relative">
-          <div className="absolute inset-x-8 top-10 bottom-10 rounded-full bg-accent/25 blur-3xl" />
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-10 lg:grid-cols-[1.1fr_1fr] lg:py-14">
+        <div className="surface-stage flex items-center justify-center border border-border p-10">
           <img
             src={heroBottle}
-            alt="Sable Nuit eau de parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
+            alt="Sable Nuit parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
             width={388}
             height={949}
-            className="relative mx-auto w-full max-w-sm shadow-[var(--shadow-flacon)]"
+            className="w-full max-w-xs drop-shadow-[var(--shadow-flacon)]"
           />
-
         </div>
-      </section>
 
-      <section id="story" className="border-y border-border bg-card/40">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-3">
-          {pillars.map((p) => (
-            <div key={p.title}>
-              <h3 className="text-2xl">{p.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.copy}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <div className="lg:pt-6">
+          <h1 className="text-4xl tracking-tight uppercase md:text-5xl">
+            Sable Nuit <span className="text-2xl text-muted-foreground md:text-3xl">(100ml)</span>
+          </h1>
 
-      <section id="notes" className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-20 md:grid-cols-2">
-        <img
-          src={notesImage}
-          alt="Bergamot, pink peppercorns, lavender, cedarwood and ambroxan crystals on dark slate"
-          width={1280}
-          height={912}
-          loading="lazy"
-          className="w-full object-cover"
-        />
-        <div>
-          <p className="eyebrow">The Composition</p>
-          <h2 className="mt-5 text-4xl md:text-5xl">Three movements</h2>
-          <div className="mt-10 space-y-8">
-            {notes.map((n) => (
-              <div key={n.stage} className="border-l border-border pl-6">
-                <p className="text-xs tracking-[0.3em] uppercase text-primary">{n.stage}</p>
-                <p className="mt-2 text-lg text-foreground/90">{n.items}</p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <span className="chip">Unisex</span>
+            <span className="chip">Fresh-Ambré</span>
+            <span className="chip">Parfum</span>
+          </div>
+
+          <p className="mt-5 text-[0.72rem] tracking-[0.16em] uppercase">
+            Late dinners · City nights · The after-party
+          </p>
+          <p className="mt-2 text-lg text-muted-foreground">
+            It smells like cold citrus, smoke and a long night ahead.
+          </p>
+
+          <p className="mt-6 text-3xl font-medium">₹ 1,499</p>
+          <p className="mt-1 text-xs text-muted-foreground">Incl. of all taxes</p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button size="lg" className="rounded-none px-10 tracking-[0.18em] uppercase">
+              Add To Cart
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="rounded-none border-input bg-transparent px-8 tracking-[0.18em] uppercase"
+            >
+              Sample 7ml
+            </Button>
+          </div>
+
+          <p className="mt-6 text-xs text-muted-foreground">* Ships within 24-36 hours of ordering.</p>
+
+          <div className="mt-10 grid gap-6 border-t border-border pt-8 sm:grid-cols-3">
+            {pillars.map((p) => (
+              <div key={p.title}>
+                <h3 className="text-sm tracking-[0.12em] uppercase">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.copy}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-border">
-        <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-          <blockquote className="text-3xl leading-snug md:text-4xl">
+      <section id="description" className="border-y border-border bg-card">
+        <div className="mx-auto max-w-3xl px-6 py-16 text-center">
+          <h2 className="text-3xl uppercase">Product Description</h2>
+          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+            Blue bergamot opens cold and metallic, struck against pink pepper. Lavender and geranium
+            settle the sharpness while ambroxan, smoked cedar and grey amber leave a warm, skin-close
+            trail that lasts long after the room empties.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            Sable Nuit is the fresh-ambré signature for the ones who start their evening when
+            everyone else is finishing theirs.
+          </p>
+        </div>
+      </section>
+
+      <section id="notes" className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
+        <img
+          src={notesImage}
+          alt="Bergamot, pink peppercorns, lavender, cedarwood and ambroxan crystals on slate"
+          width={1280}
+          height={912}
+          loading="lazy"
+          className="w-full border border-border object-cover"
+        />
+        <div>
+          <p className="eyebrow">The Composition</p>
+          <h2 className="mt-4 text-3xl uppercase md:text-4xl">Three movements</h2>
+          <div className="mt-8 divide-y divide-border border-y border-border">
+            {notes.map((n) => (
+              <div key={n.stage} className="py-5">
+                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">{n.stage}</p>
+                <p className="mt-2 text-lg">{n.items}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card">
+        <div className="mx-auto max-w-3xl px-6 py-16 text-center">
+          <blockquote className="text-2xl leading-snug md:text-3xl">
             “It opens like citrus on cold metal, then turns into skin. This is the fresh I actually
             wanted to wear at night.”
           </blockquote>
-          <p className="mt-8 text-xs tracking-[0.3em] uppercase text-muted-foreground">
+          <p className="mt-6 text-[0.7rem] tracking-[0.2em] uppercase text-muted-foreground">
             Early wear-test panel · Batch No. 001
           </p>
         </div>
       </section>
 
-      <section id="faq" className="mx-auto max-w-3xl px-6 py-20">
+      <section id="faq" className="mx-auto max-w-3xl px-6 py-16">
         <p className="eyebrow">Details</p>
-        <h2 className="mt-5 text-4xl">Good to know</h2>
-        <Accordion type="single" collapsible className="mt-10">
+        <h2 className="mt-4 text-3xl uppercase">Good to know</h2>
+        <Accordion type="single" collapsible className="mt-8">
           <AccordionItem value="a">
-            <AccordionTrigger className="text-left text-base">Is this a Dior Sauvage clone?</AccordionTrigger>
+            <AccordionTrigger className="text-left text-base">What does it smell like?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
-              It is inspired by that fresh-ambré family, not a copy. Sable Nuit keeps the bergamot and
-              ambroxan spine but pushes smoked cedar and grey amber further for a darker, more
-              evening-ready drydown.
+              A fresh-ambré profile: bright bergamot and pink pepper up top, lavender in the middle,
+              and a smoky ambroxan-cedar drydown that leans darker than most daytime freshies.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="b">
             <AccordionTrigger className="text-left text-base">When does it ship?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
-              Reservations ship in order of placement within 10 days of launch. Samples ship
-              immediately.
+              Orders ship within 24-36 hours from Ahmedabad, with free shipping across India. Samples
+              ship immediately.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="c">
             <AccordionTrigger className="text-left text-base">Sizes and refills?</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
-              Launch edition is 50 ml, with a 5 ml travel sample. A 100 ml refill flacon follows the
-              first restock.
+              Launch edition is 100 ml, with a 7 ml travel sample. A refill flacon follows the first
+              restock.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </section>
 
-      <section className="border-t border-border bg-card/40">
-        <div className="mx-auto max-w-2xl px-6 py-20 text-center">
-          <h2 className="text-4xl md:text-5xl">Wear the night first</h2>
-          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+      <section className="border-t border-border bg-card">
+        <div className="mx-auto max-w-2xl px-6 py-16 text-center">
+          <h2 className="text-3xl uppercase md:text-4xl">Wear the night first</h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             500 flacons. Numbered. Once the batch closes, the next maceration takes six weeks.
           </p>
-          <Button size="lg" className="mt-10 rounded-none px-12 tracking-[0.25em] uppercase">
-            Reserve Sable Nuit
+          <Button size="lg" className="mt-8 rounded-none px-12 tracking-[0.2em] uppercase">
+            Add To Cart
           </Button>
         </div>
       </section>
 
-      <footer className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-10 text-xs tracking-[0.2em] uppercase text-muted-foreground md:flex-row">
+      <footer className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-8 text-[0.68rem] tracking-[0.18em] uppercase text-muted-foreground md:flex-row">
         <span>Sarkar Parfums</span>
         <span>Made in India · © 2026</span>
       </footer>
-    </main>
+    </div>
   );
 }
