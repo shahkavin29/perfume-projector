@@ -92,14 +92,15 @@ function ProductLanding() {
         </div>
 
         <div className="relative">
-          <div className="absolute inset-x-8 top-10 bottom-10 rounded-full bg-accent/20 blur-3xl" />
+          <div className="absolute inset-x-8 top-10 bottom-10 rounded-full bg-accent/25 blur-3xl" />
           <img
             src={heroBottle}
-            alt="Sable Nuit eau de parfum flacon in smoky blue glass with a gunmetal cap"
-            width={1280}
-            height={1600}
-            className="relative mx-auto w-full max-w-md object-cover shadow-[var(--shadow-flacon)]"
+            alt="Sable Nuit eau de parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
+            width={928}
+            height={1152}
+            className="relative mx-auto w-full max-w-sm mix-blend-screen shadow-[var(--shadow-flacon)]"
           />
+
         </div>
       </section>
 
