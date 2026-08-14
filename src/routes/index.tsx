@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import heroBottle from "@/assets/perfume-hero.jpg";
+import heroBottle from "@/assets/perfume-hero.png";
 import notesImage from "@/assets/notes.jpg";
 
 export const Route = createFileRoute("/")({
@@ -96,9 +96,9 @@ function ProductLanding() {
           <img
             src={heroBottle}
             alt="Sable Nuit eau de parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
-            width={928}
-            height={1152}
-            className="relative mx-auto w-full max-w-sm mix-blend-screen shadow-[var(--shadow-flacon)]"
+            width={388}
+            height={949}
+            className="relative mx-auto w-full max-w-sm shadow-[var(--shadow-flacon)]"
           />
 
         </div>
