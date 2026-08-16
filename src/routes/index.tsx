@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: ProductLanding;
+  component: ProductLanding,
 });
 
 const notes = [
