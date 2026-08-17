@@ -177,6 +177,30 @@ function ProductLanding() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-card">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
+          <img
+            src={ambassador.url}
+            alt="Brand ambassador holding Sable Nuit"
+            width={1024}
+            height={1280}
+            loading="lazy"
+            className="w-full border border-border object-cover"
+          />
+          <div>
+            <p className="eyebrow">Brand Ambassador</p>
+            <h2 className="mt-4 text-3xl uppercase md:text-4xl">Worn by the night</h2>
+            <blockquote className="mt-6 text-xl leading-relaxed text-muted-foreground md:text-2xl">
+              “Sable Nuit is that rare fresh scent that actually owns the evening. I reach for it when
+              the night is just getting started.”
+            </blockquote>
+            <p className="mt-6 text-[0.7rem] tracking-[0.2em] uppercase text-muted-foreground">
+              Bhuvan Bam · Creator & Performer
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="notes" className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
         <img
           src={notesImage}
