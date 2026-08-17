@@ -71,14 +71,48 @@ function ProductLanding() {
       </header>
 
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-10 lg:grid-cols-[1.1fr_1fr] lg:py-14">
-        <div className="surface-stage flex items-center justify-center border border-border p-10">
-          <img
-            src={heroBottle}
-            alt="Sable Nuit parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
-            width={388}
-            height={949}
-            className="w-full max-w-xs drop-shadow-[var(--shadow-flacon)]"
-          />
+        <div className="space-y-4">
+          <div className="surface-stage flex items-center justify-center border border-border p-10">
+            <img
+              src={heroBottle}
+              alt="Sable Nuit parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
+              width={388}
+              height={949}
+              className="w-full max-w-xs drop-shadow-[var(--shadow-flacon)]"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="surface-stage border border-border p-3">
+              <img
+                src={lifestyle1.url}
+                alt="Sable Nuit emerald green flacon on white marble"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="surface-stage border border-border p-3">
+              <img
+                src={detail1.url}
+                alt="Close-up of the Sable Nuit gunmetal cap and engraved base"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="surface-stage border border-border p-3">
+              <img
+                src={ambassador.url}
+                alt="Brand ambassador holding Sable Nuit"
+                width={1024}
+                height={1280}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="lg:pt-6">
