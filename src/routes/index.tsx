@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import heroBottle from "@/assets/perfume-hero.png";
-import notesImage from "@/assets/notes.jpg";
+import heroBottle from "@/assets/perfume-hero.webp";
+import notesImage from "@/assets/notes.webp";
 import sarkarLogo from "@/assets/sarkar-logo.png.asset.json";
 import lifestyle1 from "@/assets/perfume-lifestyle-1.jpg.asset.json";
 import detail1 from "@/assets/perfume-detail-1.jpg.asset.json";
@@ -23,6 +23,7 @@ export const Route = createFileRoute("/")({
         content: "It smells like cold citrus, smoke and a long night ahead. Fresh-ambré parfum, 100ml.",
       },
     ],
+    links: [{ rel: "preload", as: "image", href: heroBottle, fetchpriority: "high" }],
   }),
   component: ProductLanding,
 });
@@ -78,6 +79,9 @@ function ProductLanding() {
               alt="Sable Nuit parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
               width={388}
               height={949}
+              fetchPriority="high"
+              decoding="async"
+              sizes="(max-width: 1024px) 80vw, 320px"
               className="w-full max-w-xs drop-shadow-[var(--shadow-flacon)]"
             />
           </div>
@@ -89,6 +93,7 @@ function ProductLanding() {
                 width={1024}
                 height={1024}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -99,6 +104,7 @@ function ProductLanding() {
                 width={1024}
                 height={1024}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -109,6 +115,7 @@ function ProductLanding() {
                 width={1024}
                 height={1280}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -185,6 +192,7 @@ function ProductLanding() {
             width={1024}
             height={1280}
             loading="lazy"
+                decoding="async"
             className="w-full border border-border object-cover"
           />
           <div>
@@ -208,6 +216,7 @@ function ProductLanding() {
           width={1280}
           height={912}
           loading="lazy"
+                decoding="async"
           className="w-full border border-border object-cover"
         />
         <div>
