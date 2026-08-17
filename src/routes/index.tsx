@@ -4,6 +4,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import heroBottle from "@/assets/perfume-hero.png";
 import notesImage from "@/assets/notes.jpg";
 import sarkarLogo from "@/assets/sarkar-logo.png.asset.json";
+import lifestyle1 from "@/assets/perfume-lifestyle-1.jpg.asset.json";
+import detail1 from "@/assets/perfume-detail-1.jpg.asset.json";
+import ambassador from "@/assets/brand-ambassador.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,14 +71,48 @@ function ProductLanding() {
       </header>
 
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-10 lg:grid-cols-[1.1fr_1fr] lg:py-14">
-        <div className="surface-stage flex items-center justify-center border border-border p-10">
-          <img
-            src={heroBottle}
-            alt="Sable Nuit parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
-            width={388}
-            height={949}
-            className="w-full max-w-xs drop-shadow-[var(--shadow-flacon)]"
-          />
+        <div className="space-y-4">
+          <div className="surface-stage flex items-center justify-center border border-border p-10">
+            <img
+              src={heroBottle}
+              alt="Sable Nuit parfum in a chess-king shaped emerald green glass flacon engraved Sarkar"
+              width={388}
+              height={949}
+              className="w-full max-w-xs drop-shadow-[var(--shadow-flacon)]"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="surface-stage border border-border p-3">
+              <img
+                src={lifestyle1.url}
+                alt="Sable Nuit emerald green flacon on white marble"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="surface-stage border border-border p-3">
+              <img
+                src={detail1.url}
+                alt="Close-up of the Sable Nuit gunmetal cap and engraved base"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="surface-stage border border-border p-3">
+              <img
+                src={ambassador.url}
+                alt="Brand ambassador holding Sable Nuit"
+                width={1024}
+                height={1280}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="lg:pt-6">
@@ -137,6 +174,30 @@ function ProductLanding() {
             Sable Nuit is the fresh-ambré signature for the ones who start their evening when
             everyone else is finishing theirs.
           </p>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-2">
+          <img
+            src={ambassador.url}
+            alt="Brand ambassador holding Sable Nuit"
+            width={1024}
+            height={1280}
+            loading="lazy"
+            className="w-full border border-border object-cover"
+          />
+          <div>
+            <p className="eyebrow">Brand Ambassador</p>
+            <h2 className="mt-4 text-3xl uppercase md:text-4xl">Worn by the night</h2>
+            <blockquote className="mt-6 text-xl leading-relaxed text-muted-foreground md:text-2xl">
+              “Sable Nuit is that rare fresh scent that actually owns the evening. I reach for it when
+              the night is just getting started.”
+            </blockquote>
+            <p className="mt-6 text-[0.7rem] tracking-[0.2em] uppercase text-muted-foreground">
+              Bhuvan Bam · Creator & Performer
+            </p>
+          </div>
         </div>
       </section>
 
