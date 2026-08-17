@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import heroBottle from "@/assets/perfume-hero.png";
 import notesImage from "@/assets/notes.jpg";
+import sarkarLogo from "@/assets/sarkar-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -55,7 +56,13 @@ function ProductLanding() {
               FAQ
             </a>
           </nav>
-          <span className="text-xl font-medium tracking-[0.42em] uppercase">Sarkar</span>
+          <img
+            src={sarkarLogo.url}
+            alt="Sarkar"
+            width={120}
+            height={24}
+            className="h-6 w-auto object-contain"
+          />
           <Button className="rounded-none px-6 text-[0.7rem] tracking-[0.18em] uppercase">Buy Now</Button>
         </div>
       </header>
