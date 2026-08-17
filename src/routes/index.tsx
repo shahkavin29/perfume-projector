@@ -4,6 +4,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import heroBottle from "@/assets/perfume-hero.png";
 import notesImage from "@/assets/notes.jpg";
 import sarkarLogo from "@/assets/sarkar-logo.png.asset.json";
+import lifestyle1 from "@/assets/perfume-lifestyle-1.jpg.asset.json";
+import detail1 from "@/assets/perfume-detail-1.jpg.asset.json";
+import ambassador from "@/assets/brand-ambassador.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
