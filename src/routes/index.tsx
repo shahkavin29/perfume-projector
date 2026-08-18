@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Sable Nuit by Sarkar: blue bergamot and pink pepper over lavender, cedar and ambroxan. A fresh-ambré parfum for nights out. 100ml, ₹1,499.",
+          "Sable Nuit by Sarkar: blue bergamot and pink pepper over lavender, cedar and ambroxan. A fresh-ambré parfum for nights out. 100ml, ₹2,499.",
       },
       { property: "og:title", content: "Sable Nuit (100ml) — Sarkar Parfums" },
       {
@@ -140,7 +140,7 @@ function ProductLanding() {
             It smells like cold citrus, smoke and a long night ahead.
           </p>
 
-          <p className="mt-6 text-3xl font-medium">₹ 1,499</p>
+          <p className="mt-6 text-3xl font-medium">₹ 2,499</p>
           <p className="mt-1 text-xs text-muted-foreground">Incl. of all taxes</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -192,7 +192,7 @@ function ProductLanding() {
             width={1024}
             height={1280}
             loading="lazy"
-                decoding="async"
+            decoding="async"
             className="w-full border border-border object-cover"
           />
           <div>
@@ -216,7 +216,7 @@ function ProductLanding() {
           width={1280}
           height={912}
           loading="lazy"
-                decoding="async"
+          decoding="async"
           className="w-full border border-border object-cover"
         />
         <div>
